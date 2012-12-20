@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DEEA9751683A182000E3E5C /* JPServiceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPServiceConstants.h; sourceTree = "<group>"; };
 		7DFB662E1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerBluetoothPeripheral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFB66321682C3AA00FDF94C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DFB66341682C3AA00FDF94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +93,7 @@
 		7DFB66231682C3AA00FDF94C = {
 			isa = PBXGroup;
 			children = (
+				7DEEA9751683A182000E3E5C /* JPServiceConstants.h */,
 				7DFB66381682C3AA00FDF94C /* AccelerometerBluetoothPeripheral */,
 				7DFB66631682C3EE00FDF94C /* AccelerometerBluetoothHost */,
 				7DFB66311682C3AA00FDF94C /* Frameworks */,
@@ -473,6 +475,7 @@
 				7DFB66541682C3AA00FDF94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DFB66751682C3EE00FDF94C /* Build configuration list for PBXNativeTarget "AccelerometerBluetoothHost" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +484,7 @@
 				7DFB66771682C3EE00FDF94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

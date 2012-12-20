@@ -10,8 +10,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreMotion/CoreMotion.h>
 
-#define MOTION_SERVICE_UUID @"180D"
-#define ATTITUDE_CHARACTERISTIC_UUID @"2A37"
+#import "JPServiceConstants.h"
 
 @interface JPViewController () <CBPeripheralManagerDelegate>
 
@@ -77,13 +76,13 @@
     // ... so build our service.
     
     // Start with the CBMutableCharacteristic
-    self.attitudeCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:@"2A37"]
+    self.attitudeCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:ATTITUDE_CHARACTERISTIC_UUID]
 																	 properties:CBCharacteristicPropertyNotify
 																		  value:nil
 																	permissions:CBAttributePermissionsReadable];
 	
     // Then the service
-	self.motionService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:@"180D"]
+	self.motionService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:MOTION_SERVICE_UUID]
 																	   primary:YES];
     
     // Add the characteristic to the service
@@ -92,7 +91,7 @@
     // And add it to the peripheral manager
     [self.peripheralManager addService:self.motionService];
 	
-	[self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:@"180D"]] }];
+	[self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:MOTION_SERVICE_UUID]] }];
 
 
 }

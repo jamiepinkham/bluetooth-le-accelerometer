@@ -10,6 +10,8 @@
 
 #import <IOBluetooth/IOBluetooth.h>
 
+#import "JPServiceConstants.h"
+
 @interface JPAppDelegate ()
 
 @property (weak, nonatomic) IBOutlet NSTextField *xLabel;
@@ -38,8 +40,6 @@
 
 @end
 
-#define MOTION_SERVICE_UUID @"180D"
-#define ATTITUDE_CHARACTERISTIC_UUID @"2A37"
 
 @implementation JPAppDelegate
 
@@ -82,8 +82,7 @@
 
 - (void) startScan
 {
-
-    [self.centralManager scanForPeripheralsWithServices:[NSArray arrayWithObject:[CBUUID UUIDWithString:MOTION_SERVICE_UUID]] options:nil];
+    [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:MOTION_SERVICE_UUID]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @NO}];
 	NSLog(@"scanning started");
 }
 
@@ -127,16 +126,13 @@
 }
 
 /*
- Invoked when the central discovers heart rate peripheral while scanning.
+ Invoked when the central discovers motion peripheral while scanning.
  */
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
 	
     
     NSLog(@"Discovered %@ at %@", peripheral.name, RSSI);
-    
-    // Ok, it's in range - have we already seen it?
-	
     NSMutableArray *peripherals = [self mutableArrayValueForKey:@"foundPeripherals"];
     if( ![self.foundPeripherals containsObject:peripheral] )
 	{
@@ -148,7 +144,7 @@
 #pragma mark - Scan sheet methods
 
 /*
- Open scan sheet to discover heart rate peripherals if it is LE capable hardware
+ Open scan sheet to discover motion peripherals if it is LE capable hardware
  */
 - (IBAction)openScanSheet:(id)sender
 {
@@ -179,7 +175,7 @@
 }
 
 /*
- This method is called when Scan sheet is closed. Initiate connection to selected heart rate peripheral
+ This method is called when Scan sheet is closed. Initiate connection to selected motion peripheral
  */
 - (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
@@ -290,7 +286,7 @@
     {
         NSLog(@"Service found with UUID: %@", aService.UUID);
         
-        /* Heart Rate Service */
+        /* Motion Service */
         if ([aService.UUID isEqual:[CBUUID UUIDWithString:MOTION_SERVICE_UUID]])
         {
             [aPeripheral discoverCharacteristics:nil forService:aService];
@@ -314,7 +310,7 @@
     {
         for (CBCharacteristic *aChar in service.characteristics)
         {
-            /* Set notification on heart rate measurement */
+            /* Set notification on attitude measurement */
             if ([aChar.UUID isEqual:[CBUUID UUIDWithString:ATTITUDE_CHARACTERISTIC_UUID]])
             {
                 [self.connectedPeripheral setNotifyValue:YES forCharacteristic:aChar];
@@ -343,12 +339,12 @@
  */
 - (void) peripheral:(CBPeripheral *)aPeripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
-    /* Updated value for heart rate measurement received */
+    /* Updated value for attitude measurement received */
     if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:ATTITUDE_CHARACTERISTIC_UUID]])
     {
         if( (characteristic.value)  || !error )
         {
-            /* Update UI with heart rate data */
+            /* Update UI with motion data */
             [self updateWithMotionData:characteristic.value];
         }
     }
