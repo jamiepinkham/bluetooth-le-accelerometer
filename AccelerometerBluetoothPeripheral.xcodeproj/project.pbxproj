@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DFB66331682C3AA00FDF94C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB66321682C3AA00FDF94C /* UIKit.framework */; };
+		7DFB66351682C3AA00FDF94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB66341682C3AA00FDF94C /* Foundation.framework */; };
+		7DFB66371682C3AA00FDF94C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB66361682C3AA00FDF94C /* CoreGraphics.framework */; };
+		7DFB663D1682C3AA00FDF94C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB663B1682C3AA00FDF94C /* InfoPlist.strings */; };
+		7DFB663F1682C3AA00FDF94C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB663E1682C3AA00FDF94C /* main.m */; };
+		7DFB66431682C3AA00FDF94C /* JPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB66421682C3AA00FDF94C /* JPAppDelegate.m */; };
+		7DFB66451682C3AA00FDF94C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB66441682C3AA00FDF94C /* Default.png */; };
+		7DFB66471682C3AA00FDF94C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB66461682C3AA00FDF94C /* Default@2x.png */; };
+		7DFB66491682C3AA00FDF94C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB66481682C3AA00FDF94C /* Default-568h@2x.png */; };
+		7DFB664C1682C3AA00FDF94C /* JPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB664B1682C3AA00FDF94C /* JPViewController.m */; };
+		7DFB664F1682C3AA00FDF94C /* JPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB664D1682C3AA00FDF94C /* JPViewController.xib */; };
+		7DFB66561682C3CB00FDF94C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB66551682C3CB00FDF94C /* CoreBluetooth.framework */; };
+		7DFB665E1682C3EE00FDF94C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB665D1682C3EE00FDF94C /* Cocoa.framework */; };
+		7DFB66681682C3EE00FDF94C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB66661682C3EE00FDF94C /* InfoPlist.strings */; };
+		7DFB666A1682C3EE00FDF94C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB66691682C3EE00FDF94C /* main.m */; };
+		7DFB666E1682C3EE00FDF94C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB666C1682C3EE00FDF94C /* Credits.rtf */; };
+		7DFB66711682C3EE00FDF94C /* JPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB66701682C3EE00FDF94C /* JPAppDelegate.m */; };
+		7DFB66741682C3EE00FDF94C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFB66721682C3EE00FDF94C /* MainMenu.xib */; };
+		7DFB66791682C3FD00FDF94C /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB66781682C3FD00FDF94C /* IOBluetooth.framework */; };
+		7DFB667B1682C6C200FDF94C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFB667A1682C6C100FDF94C /* CoreMotion.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7DFB662E1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerBluetoothPeripheral.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DFB66321682C3AA00FDF94C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7DFB66341682C3AA00FDF94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DFB66361682C3AA00FDF94C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7DFB663A1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccelerometerBluetoothPeripheral-Info.plist"; sourceTree = "<group>"; };
+		7DFB663C1682C3AA00FDF94C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DFB663E1682C3AA00FDF94C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DFB66401682C3AA00FDF94C /* AccelerometerBluetoothPeripheral-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccelerometerBluetoothPeripheral-Prefix.pch"; sourceTree = "<group>"; };
+		7DFB66411682C3AA00FDF94C /* JPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPAppDelegate.h; sourceTree = "<group>"; };
+		7DFB66421682C3AA00FDF94C /* JPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPAppDelegate.m; sourceTree = "<group>"; };
+		7DFB66441682C3AA00FDF94C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7DFB66461682C3AA00FDF94C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7DFB66481682C3AA00FDF94C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7DFB664A1682C3AA00FDF94C /* JPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPViewController.h; sourceTree = "<group>"; };
+		7DFB664B1682C3AA00FDF94C /* JPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPViewController.m; sourceTree = "<group>"; };
+		7DFB664E1682C3AA00FDF94C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JPViewController.xib; sourceTree = "<group>"; };
+		7DFB66551682C3CB00FDF94C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		7DFB665B1682C3EE00FDF94C /* AccelerometerBluetoothHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerBluetoothHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DFB665D1682C3EE00FDF94C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		7DFB66601682C3EE00FDF94C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7DFB66611682C3EE00FDF94C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7DFB66621682C3EE00FDF94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DFB66651682C3EE00FDF94C /* AccelerometerBluetoothHost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccelerometerBluetoothHost-Info.plist"; sourceTree = "<group>"; };
+		7DFB66671682C3EE00FDF94C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DFB66691682C3EE00FDF94C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DFB666B1682C3EE00FDF94C /* AccelerometerBluetoothHost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccelerometerBluetoothHost-Prefix.pch"; sourceTree = "<group>"; };
+		7DFB666D1682C3EE00FDF94C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7DFB666F1682C3EE00FDF94C /* JPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPAppDelegate.h; sourceTree = "<group>"; };
+		7DFB66701682C3EE00FDF94C /* JPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPAppDelegate.m; sourceTree = "<group>"; };
+		7DFB66731682C3EE00FDF94C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7DFB66781682C3FD00FDF94C /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		7DFB667A1682C6C100FDF94C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DFB662B1682C3AA00FDF94C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB667B1682C6C200FDF94C /* CoreMotion.framework in Frameworks */,
+				7DFB66561682C3CB00FDF94C /* CoreBluetooth.framework in Frameworks */,
+				7DFB66331682C3AA00FDF94C /* UIKit.framework in Frameworks */,
+				7DFB66351682C3AA00FDF94C /* Foundation.framework in Frameworks */,
+				7DFB66371682C3AA00FDF94C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DFB66581682C3EE00FDF94C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB66791682C3FD00FDF94C /* IOBluetooth.framework in Frameworks */,
+				7DFB665E1682C3EE00FDF94C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DFB66231682C3AA00FDF94C = {
+			isa = PBXGroup;
+			children = (
+				7DFB66381682C3AA00FDF94C /* AccelerometerBluetoothPeripheral */,
+				7DFB66631682C3EE00FDF94C /* AccelerometerBluetoothHost */,
+				7DFB66311682C3AA00FDF94C /* Frameworks */,
+				7DFB662F1682C3AA00FDF94C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DFB662F1682C3AA00FDF94C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB662E1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral.app */,
+				7DFB665B1682C3EE00FDF94C /* AccelerometerBluetoothHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DFB66311682C3AA00FDF94C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB667A1682C6C100FDF94C /* CoreMotion.framework */,
+				7DFB66781682C3FD00FDF94C /* IOBluetooth.framework */,
+				7DFB66551682C3CB00FDF94C /* CoreBluetooth.framework */,
+				7DFB66321682C3AA00FDF94C /* UIKit.framework */,
+				7DFB66341682C3AA00FDF94C /* Foundation.framework */,
+				7DFB66361682C3AA00FDF94C /* CoreGraphics.framework */,
+				7DFB665D1682C3EE00FDF94C /* Cocoa.framework */,
+				7DFB665F1682C3EE00FDF94C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DFB66381682C3AA00FDF94C /* AccelerometerBluetoothPeripheral */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB66411682C3AA00FDF94C /* JPAppDelegate.h */,
+				7DFB66421682C3AA00FDF94C /* JPAppDelegate.m */,
+				7DFB664A1682C3AA00FDF94C /* JPViewController.h */,
+				7DFB664B1682C3AA00FDF94C /* JPViewController.m */,
+				7DFB664D1682C3AA00FDF94C /* JPViewController.xib */,
+				7DFB66391682C3AA00FDF94C /* Supporting Files */,
+			);
+			path = AccelerometerBluetoothPeripheral;
+			sourceTree = "<group>";
+		};
+		7DFB66391682C3AA00FDF94C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB663A1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral-Info.plist */,
+				7DFB663B1682C3AA00FDF94C /* InfoPlist.strings */,
+				7DFB663E1682C3AA00FDF94C /* main.m */,
+				7DFB66401682C3AA00FDF94C /* AccelerometerBluetoothPeripheral-Prefix.pch */,
+				7DFB66441682C3AA00FDF94C /* Default.png */,
+				7DFB66461682C3AA00FDF94C /* Default@2x.png */,
+				7DFB66481682C3AA00FDF94C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DFB665F1682C3EE00FDF94C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB66601682C3EE00FDF94C /* AppKit.framework */,
+				7DFB66611682C3EE00FDF94C /* CoreData.framework */,
+				7DFB66621682C3EE00FDF94C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7DFB66631682C3EE00FDF94C /* AccelerometerBluetoothHost */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB666F1682C3EE00FDF94C /* JPAppDelegate.h */,
+				7DFB66701682C3EE00FDF94C /* JPAppDelegate.m */,
+				7DFB66721682C3EE00FDF94C /* MainMenu.xib */,
+				7DFB66641682C3EE00FDF94C /* Supporting Files */,
+			);
+			path = AccelerometerBluetoothHost;
+			sourceTree = "<group>";
+		};
+		7DFB66641682C3EE00FDF94C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB66651682C3EE00FDF94C /* AccelerometerBluetoothHost-Info.plist */,
+				7DFB66661682C3EE00FDF94C /* InfoPlist.strings */,
+				7DFB66691682C3EE00FDF94C /* main.m */,
+				7DFB666B1682C3EE00FDF94C /* AccelerometerBluetoothHost-Prefix.pch */,
+				7DFB666C1682C3EE00FDF94C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DFB662D1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DFB66521682C3AA00FDF94C /* Build configuration list for PBXNativeTarget "AccelerometerBluetoothPeripheral" */;
+			buildPhases = (
+				7DFB662A1682C3AA00FDF94C /* Sources */,
+				7DFB662B1682C3AA00FDF94C /* Frameworks */,
+				7DFB662C1682C3AA00FDF94C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccelerometerBluetoothPeripheral;
+			productName = AccelerometerBluetoothPeripheral;
+			productReference = 7DFB662E1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DFB665A1682C3EE00FDF94C /* AccelerometerBluetoothHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DFB66751682C3EE00FDF94C /* Build configuration list for PBXNativeTarget "AccelerometerBluetoothHost" */;
+			buildPhases = (
+				7DFB66571682C3EE00FDF94C /* Sources */,
+				7DFB66581682C3EE00FDF94C /* Frameworks */,
+				7DFB66591682C3EE00FDF94C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccelerometerBluetoothHost;
+			productName = AccelerometerBluetoothHost;
+			productReference = 7DFB665B1682C3EE00FDF94C /* AccelerometerBluetoothHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DFB66251682C3AA00FDF94C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JP;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jamie Pinkham";
+			};
+			buildConfigurationList = 7DFB66281682C3AA00FDF94C /* Build configuration list for PBXProject "AccelerometerBluetoothPeripheral" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DFB66231682C3AA00FDF94C;
+			productRefGroup = 7DFB662F1682C3AA00FDF94C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DFB662D1682C3AA00FDF94C /* AccelerometerBluetoothPeripheral */,
+				7DFB665A1682C3EE00FDF94C /* AccelerometerBluetoothHost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DFB662C1682C3AA00FDF94C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB663D1682C3AA00FDF94C /* InfoPlist.strings in Resources */,
+				7DFB66451682C3AA00FDF94C /* Default.png in Resources */,
+				7DFB66471682C3AA00FDF94C /* Default@2x.png in Resources */,
+				7DFB66491682C3AA00FDF94C /* Default-568h@2x.png in Resources */,
+				7DFB664F1682C3AA00FDF94C /* JPViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DFB66591682C3EE00FDF94C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB66681682C3EE00FDF94C /* InfoPlist.strings in Resources */,
+				7DFB666E1682C3EE00FDF94C /* Credits.rtf in Resources */,
+				7DFB66741682C3EE00FDF94C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DFB662A1682C3AA00FDF94C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB663F1682C3AA00FDF94C /* main.m in Sources */,
+				7DFB66431682C3AA00FDF94C /* JPAppDelegate.m in Sources */,
+				7DFB664C1682C3AA00FDF94C /* JPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DFB66571682C3EE00FDF94C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB666A1682C3EE00FDF94C /* main.m in Sources */,
+				7DFB66711682C3EE00FDF94C /* JPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7DFB663B1682C3AA00FDF94C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DFB663C1682C3AA00FDF94C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DFB664D1682C3AA00FDF94C /* JPViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DFB664E1682C3AA00FDF94C /* en */,
+			);
+			name = JPViewController.xib;
+			sourceTree = "<group>";
+		};
+		7DFB66661682C3EE00FDF94C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DFB66671682C3EE00FDF94C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DFB666C1682C3EE00FDF94C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DFB666D1682C3EE00FDF94C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7DFB66721682C3EE00FDF94C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DFB66731682C3EE00FDF94C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DFB66501682C3AA00FDF94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DFB66511682C3AA00FDF94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DFB66531682C3AA00FDF94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccelerometerBluetoothPeripheral/AccelerometerBluetoothPeripheral-Prefix.pch";
+				INFOPLIST_FILE = "AccelerometerBluetoothPeripheral/AccelerometerBluetoothPeripheral-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DFB66541682C3AA00FDF94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccelerometerBluetoothPeripheral/AccelerometerBluetoothPeripheral-Prefix.pch";
+				INFOPLIST_FILE = "AccelerometerBluetoothPeripheral/AccelerometerBluetoothPeripheral-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7DFB66761682C3EE00FDF94C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccelerometerBluetoothHost/AccelerometerBluetoothHost-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "AccelerometerBluetoothHost/AccelerometerBluetoothHost-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DFB66771682C3EE00FDF94C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccelerometerBluetoothHost/AccelerometerBluetoothHost-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "AccelerometerBluetoothHost/AccelerometerBluetoothHost-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DFB66281682C3AA00FDF94C /* Build configuration list for PBXProject "AccelerometerBluetoothPeripheral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DFB66501682C3AA00FDF94C /* Debug */,
+				7DFB66511682C3AA00FDF94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DFB66521682C3AA00FDF94C /* Build configuration list for PBXNativeTarget "AccelerometerBluetoothPeripheral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DFB66531682C3AA00FDF94C /* Debug */,
+				7DFB66541682C3AA00FDF94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DFB66751682C3EE00FDF94C /* Build configuration list for PBXNativeTarget "AccelerometerBluetoothHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DFB66761682C3EE00FDF94C /* Debug */,
+				7DFB66771682C3EE00FDF94C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DFB66251682C3AA00FDF94C /* Project object */;
+}

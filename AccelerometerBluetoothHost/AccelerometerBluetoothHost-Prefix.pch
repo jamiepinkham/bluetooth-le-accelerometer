@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AccelerometerBluetoothHost' target in the 'AccelerometerBluetoothHost' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
