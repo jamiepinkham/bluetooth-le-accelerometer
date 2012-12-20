@@ -191,7 +191,7 @@
             [self.progressIndicator startAnimation:self];
             [self.connectButton setTitle:@"Cancel"];
 			[self.connectButton sizeToFit];
-            [self.centralManager connectPeripheral:self.connectedPeripheral options:nil];
+            [self.centralManager connectPeripheral:self.connectedPeripheral options:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey : @YES}];
         }
     }
 }
@@ -242,6 +242,8 @@
  */
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)aPeripheral error:(NSError *)error
 {
+	
+	NSLog(@"Did Disconnect to peripheral: %@ with error = %@", aPeripheral, [error localizedDescription]);
 //	self.connected = @"Not connected";
     [self.connectButton setTitle:@"Connect"];
 	[self.connectButton sizeToFit];

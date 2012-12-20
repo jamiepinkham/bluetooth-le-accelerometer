@@ -9,7 +9,7 @@
 #ifndef AccelerometerBluetoothPeripheral_JPServiceConstants_h
 #define AccelerometerBluetoothPeripheral_JPServiceConstants_h
 
-#define MOTION_SERVICE_UUID @"181D"
-#define ATTITUDE_CHARACTERISTIC_UUID @"12E419A3-6704-4FDD-94B5-0390695FDC5A"
+#define ATTITUDE_CHARACTERISTIC_UUID @"E29FE7B7-4032-4ABB-8912-61863FD29A6B"
+#define MOTION_SERVICE_UUID @"931C"
 
 #endif

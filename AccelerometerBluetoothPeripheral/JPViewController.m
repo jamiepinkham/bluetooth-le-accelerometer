@@ -50,6 +50,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[self.peripheralManager stopAdvertising];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -124,19 +129,21 @@
 {
 	if(!self.trackingMotion)
 	{
-		[self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+		[self.motionManager startDeviceMotionUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion *motion, NSError *error) {
 			CMAttitude *attitude = motion.attitude;
 			if(self.referenceAttitude)
 			{
 				[attitude multiplyByInverseOfAttitude:self.referenceAttitude];
-				self.xLabel.text = [NSString stringWithFormat:@"%f", attitude.pitch];
-				self.xBar.progress = ABS(attitude.pitch);
-				
-				self.yLabel.text = [NSString stringWithFormat:@"%f", attitude.roll];
-				self.yBar.progress = ABS(attitude.roll);
-				
-				self.zLabel.text = [NSString stringWithFormat:@"%f", attitude.yaw];
-				self.zBar.progress = ABS(attitude.yaw);
+				dispatch_async(dispatch_get_main_queue(), ^{
+					self.xLabel.text = [NSString stringWithFormat:@"%f", attitude.pitch];
+					self.xBar.progress = ABS(attitude.pitch);
+					
+					self.yLabel.text = [NSString stringWithFormat:@"%f", attitude.roll];
+					self.yBar.progress = ABS(attitude.roll);
+					
+					self.zLabel.text = [NSString stringWithFormat:@"%f", attitude.yaw];
+					self.zBar.progress = ABS(attitude.yaw);
+				});
 				
 				float rotationXYZ[3];
 				rotationXYZ[0] = attitude.pitch;
